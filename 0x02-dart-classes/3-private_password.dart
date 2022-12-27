@@ -4,8 +4,9 @@ class Password {
   String get password => _password;
 
   bool isValid() {
-    return ((_password.length >= 8) &&
-    (_password.length <= 16)) && (this._password.contains(RegExp(r'^[a-zA-Z\d]*$')));
+    return ((_password.length >= 8) &&(_password.length <= 16))
+     && (this.password.contains(new RegExp(r"[A-Z]"))&& this.password.contains(RegExp(r"[a-z]"))
+	&& this.password.contains( RegExp(r"[0-9]")));
   }
 
   @override
